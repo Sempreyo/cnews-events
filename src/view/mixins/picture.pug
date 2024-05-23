@@ -1,0 +1,5 @@
+mixin picture(picPath, type, className, alt)
+    picture
+        source(srcset=`./images/${picPath}.webp 1x, ./images/${picPath}@2x.webp 2x`, type='image/webp')
+        source(srcset=`./images/${picPath}.webp 1x, ./images/${picPath}@2x.webp 2x`, type='image/webp')
+        img(class=className, src=`./images/${picPath}.${type}`, srcset=`./images/${picPath}.${type} 1x, ./images/${picPath}@2x.${type} 2x`, alt=alt)&attributes(attributes)
