@@ -1,0 +1,20 @@
+.hero {
+    padding-top: 90px;
+    padding-bottom: 40px;
+
+    &__container {
+        max-width: 820px;
+        margin-bottom: 97px;
+        position: relative;
+    }
+
+    &__waves {
+        position: absolute;
+        top: 80px;
+        left: calc(100% - 20px);
+    }
+
+    &__pagination {
+        margin-top: 29px;
+    }
+}

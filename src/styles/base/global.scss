@@ -40,8 +40,8 @@ body {
 	scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
 	font-family: $mainFont;
-	background-color: $white;
-	color: $black;
+	background-color: $green-bg;
+	color: $white;
 
 	/* iOS fix */
 	-webkit-font-smoothing: antialiased;
@@ -58,7 +58,7 @@ main {
 }
 
 a {
-	color: $black;
+	color: $white;
 	text-decoration: none;
 }
 
@@ -103,4 +103,27 @@ textarea {
 	&:focus::placeholder {
 		opacity: 0;
 	}
+}
+
+/* Swiper */
+.swiper-pagination-bullets {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 27px;
+}
+
+.swiper-pagination-bullet {
+	position: relative;
+	width: 15px;
+	height: 15px;
+	background-color: $white;
+	border: 3px solid $green-18;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: transparent;
+	border-color: $red;
 }

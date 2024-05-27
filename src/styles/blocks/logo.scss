@@ -1,0 +1,21 @@
+.logo {
+    display: flex;
+    align-items: center;
+
+    &__delimiter {
+        width: 1px;
+        height: 100px;
+        background-color: $white;
+        margin: 0 43px;
+    }
+
+    &__icon {
+        &--itz {
+            width: 154px;
+        }
+
+        &--cnews {
+            width: 193px;
+        }
+    }
+}

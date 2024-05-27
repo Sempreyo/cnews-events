@@ -1,7 +1,16 @@
 .header {
 	$parent: &;
 
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	padding-top: 127px;
+
 	&--opened {
 		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+	}
+
+	&__menu {
+		margin-top: 60px;
 	}
 }

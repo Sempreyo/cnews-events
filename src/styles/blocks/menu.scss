@@ -1,0 +1,36 @@
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 113px;
+    
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+
+        a {
+            position: relative;
+            font-family: $latoFont;
+            font-size: 15px;
+            line-height: 1.2;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -12px;
+                display: block;
+                width: 0;
+                height: 2px;
+                background: $green-18;
+            }
+
+            &:hover::after {
+                animation: link-hover-line 0.3s ease forwards;
+            }
+        }
+    }
+}

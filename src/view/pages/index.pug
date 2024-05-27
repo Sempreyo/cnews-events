@@ -7,4 +7,48 @@ block vars
 		};
 
 block main
-	section.hero
+	.top-part
+		.top-part__bg-nodes.bg-nodes
+			+picture('nodes', 'jpg', 'bg-nodes__image')
+		include ../blocks/header
+		section.hero
+			.container.hero__container
+				+waves-pattern('waves-pattern--red hero__waves')
+				.hero__slider.swiper
+					.swiper-wrapper
+						.top-event.swiper-slide
+							.top-event__image
+								+picture('placeholder', 'jpg')
+							.top-event__content
+								.top-event__type Конференция
+								.top-event__date 09.02.2023
+								.top-event__title Business Process Management <span>2023</span>
+								.top-event__link Подробнее
+						.top-event.swiper-slide
+							.top-event__image
+								+picture('placeholder', 'jpg')
+							.top-event__content
+								.top-event__type Конференция
+								.top-event__date 09.02.2023
+								.top-event__title Business Process Management <span>2023</span>
+								.top-event__link Подробнее
+						.top-event.swiper-slide
+							.top-event__image
+								+picture('placeholder', 'jpg')
+							.top-event__content
+								.top-event__type Конференция
+								.top-event__date 09.02.2023
+								.top-event__title Business Process Management <span>2023</span>
+								.top-event__link Подробнее
+						.top-event.swiper-slide
+							.top-event__image
+								+picture('placeholder', 'jpg')
+							.top-event__content
+								.top-event__type Конференция
+								.top-event__date 09.02.2023
+								.top-event__title Business Process Management <span>2023</span>
+								.top-event__link Подробнее
+					.hero__pagination
+			.container
+				+title('Предстоящие <br> <span>мероприятия</span>')
+			

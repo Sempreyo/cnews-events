@@ -9,9 +9,106 @@
     <title>Cnews events</title>
   </head>
   <body>
-    <header class="header"></header>
     <main class="main">
-      <section class="hero"></section>
+      <div class="top-part">
+        <div class="top-part__bg-nodes bg-nodes">
+          <picture>
+            <source srcset="./images/nodes.webp 1x, ./images/nodes@2x.webp 2x" type="image/webp">
+            <source srcset="./images/nodes.webp 1x, ./images/nodes@2x.webp 2x" type="image/webp"><img class="bg-nodes__image" src="./images/nodes.jpg" srcset="./images/nodes.jpg 1x, ./images/nodes@2x.jpg 2x">
+          </picture>
+        </div>
+        <header class="header">
+          <div class="container">
+            <div class="logo">
+              <svg class="logo__icon logo__icon--itz">
+                <use xlink:href="./images/sprite.svg#logo-itz"></use>
+              </svg>
+              <div class="logo__delimiter"></div>
+              <svg class="logo__icon logo__icon--cnews">
+                <use xlink:href="./images/sprite.svg#logo-cnews"></use>
+              </svg>
+            </div>
+            <div class="header__menu menu">
+              <ul class="menu__list">
+                <li><a href="#" target="_blank">Мероприятия</a></li>
+                <li><a href="#" target="_blank">Архив</a></li>
+                <li><a href="#" target="_blank">Материалы</a></li>
+                <li><a href="#" target="_blank">О компании</a></li>
+              </ul>
+              <div class="button menu__link" href="#">Заказать мероприятие</div>
+            </div>
+          </div>
+        </header>
+        <section class="hero">
+          <div class="container hero__container">
+            <div class="waves-pattern waves-pattern--red hero__waves"></div>
+            <div class="hero__slider swiper">
+              <div class="swiper-wrapper">
+                <div class="top-event swiper-slide">
+                  <div class="top-event__image">
+                    <picture>
+                      <source srcset="./images/placeholder.webp 1x, ./images/placeholder@2x.webp 2x" type="image/webp">
+                      <source srcset="./images/placeholder.webp 1x, ./images/placeholder@2x.webp 2x" type="image/webp"><img src="./images/placeholder.jpg" srcset="./images/placeholder.jpg 1x, ./images/placeholder@2x.jpg 2x">
+                    </picture>
+                  </div>
+                  <div class="top-event__content">
+                    <div class="top-event__type">Конференция</div>
+                    <div class="top-event__date">09.02.2023</div>
+                    <div class="top-event__title">Business Process Management <span>2023</span></div>
+                    <div class="top-event__link">Подробнее</div>
+                  </div>
+                </div>
+                <div class="top-event swiper-slide">
+                  <div class="top-event__image">
+                    <picture>
+                      <source srcset="./images/placeholder.webp 1x, ./images/placeholder@2x.webp 2x" type="image/webp">
+                      <source srcset="./images/placeholder.webp 1x, ./images/placeholder@2x.webp 2x" type="image/webp"><img src="./images/placeholder.jpg" srcset="./images/placeholder.jpg 1x, ./images/placeholder@2x.jpg 2x">
+                    </picture>
+                  </div>
+                  <div class="top-event__content">
+                    <div class="top-event__type">Конференция</div>
+                    <div class="top-event__date">09.02.2023</div>
+                    <div class="top-event__title">Business Process Management <span>2023</span></div>
+                    <div class="top-event__link">Подробнее</div>
+                  </div>
+                </div>
+                <div class="top-event swiper-slide">
+                  <div class="top-event__image">
+                    <picture>
+                      <source srcset="./images/placeholder.webp 1x, ./images/placeholder@2x.webp 2x" type="image/webp">
+                      <source srcset="./images/placeholder.webp 1x, ./images/placeholder@2x.webp 2x" type="image/webp"><img src="./images/placeholder.jpg" srcset="./images/placeholder.jpg 1x, ./images/placeholder@2x.jpg 2x">
+                    </picture>
+                  </div>
+                  <div class="top-event__content">
+                    <div class="top-event__type">Конференция</div>
+                    <div class="top-event__date">09.02.2023</div>
+                    <div class="top-event__title">Business Process Management <span>2023</span></div>
+                    <div class="top-event__link">Подробнее</div>
+                  </div>
+                </div>
+                <div class="top-event swiper-slide">
+                  <div class="top-event__image">
+                    <picture>
+                      <source srcset="./images/placeholder.webp 1x, ./images/placeholder@2x.webp 2x" type="image/webp">
+                      <source srcset="./images/placeholder.webp 1x, ./images/placeholder@2x.webp 2x" type="image/webp"><img src="./images/placeholder.jpg" srcset="./images/placeholder.jpg 1x, ./images/placeholder@2x.jpg 2x">
+                    </picture>
+                  </div>
+                  <div class="top-event__content">
+                    <div class="top-event__type">Конференция</div>
+                    <div class="top-event__date">09.02.2023</div>
+                    <div class="top-event__title">Business Process Management <span>2023</span></div>
+                    <div class="top-event__link">Подробнее</div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero__pagination"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="title">Предстоящие <br> <span>мероприятия</span></div>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="footer"></footer>
   </body>

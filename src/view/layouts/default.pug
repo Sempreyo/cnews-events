@@ -14,14 +14,11 @@ html(lang='ru')
 		title= `${page.title}`
 
 	body
-		block header
-			include ../partials/header
-
 		main.main
 			block main
 
 		block footer
-			include ../partials/footer
+			include ../blocks/footer
 
 
 	script(src="js/main.min.js")

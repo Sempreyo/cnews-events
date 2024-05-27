@@ -1,0 +1,11 @@
+.top-part {
+    position: relative;
+
+    &__bg-nodes {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+    }
+}
