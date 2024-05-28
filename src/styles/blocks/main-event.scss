@@ -1,0 +1,115 @@
+.main-event {
+	$parent: &;
+
+	padding: 98px 0 90px;
+
+	&__container {
+		max-width: 945px;
+	}
+
+	&__window {
+		position: relative;
+		border: 6px solid $white;
+
+		&:hover {
+			#{$parent}__image img {
+				transform: scale(1.05);
+			}
+
+			#{$parent}__title span {
+				background-size: 100% 2px;
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -6px;
+			right: calc(100% + 6px);
+			width: 40px;
+			height: 40px;
+			background-color: $red;
+		}
+	}
+
+	&__waves {
+		@include waves-pattern('0c4552');
+
+		position: absolute;
+		top: 90px;
+		left: calc(100% - 22px);
+		z-index: -1;
+	}
+
+	&__image {
+		position: relative;
+		height: 0;
+		padding-top: 31.5%;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		padding: 35px 35px 30px 25px;
+	}
+
+	&__title {
+		position: relative;
+		display: inline;
+		font-size: 30px;
+		line-height: 1.1;
+		text-transform: uppercase;
+
+		span {
+			background: no-repeat 0 100%;
+			background-image: linear-gradient(currentColor, currentColor);
+			background-size: 0 2px;
+			transition: background-size 0.6s ease;
+		}
+	}
+
+	&__info {
+		text-align: right;
+	}
+
+	&__tag {
+		color: $gray-a0;
+		font-size: 11px;
+		line-height: 1.3;
+		text-transform: uppercase;
+	}
+
+	&__date {
+		font-size: 25px;
+		line-height: 1.25;
+		margin-top: 10px;
+	}
+
+	&__text-link {
+		color: $green-18;
+		font-family: $latoFont;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 1.2;
+		text-decoration: underline;
+		margin-top: 10px;
+	}
+
+	&__link {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+	}
+}

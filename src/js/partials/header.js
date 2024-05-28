@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const header = document.querySelector(".header");
+	/*const header = document.querySelector(".header");
 	const headerOffset = header.offsetTop;
 	let headerHeight = header.offsetHeight;
 	let scroll = window.pageYOffset;
@@ -54,5 +54,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	headerResizeObserver.observe(header);
 
 	initHeader();
-	scrollHeaderHandler();
+	scrollHeaderHandler();*/
 });

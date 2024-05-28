@@ -1,0 +1,89 @@
+.events {
+	&__container {
+		max-width: 1040px;
+	}
+
+	&__grid-wrapper {
+		position: relative;
+	}
+
+	&__waves {
+		@include waves-pattern('0c4552');
+
+		position: absolute;
+		bottom: 33px;
+		right: calc(100% - 60px);
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 10px;
+	}
+
+	&__item {
+		grid-column: span 2;
+
+		/* Ширина элементов в каждой четной строке грида */
+		&:nth-child(5n),
+		&:nth-child(5n - 1) {
+			grid-column: span 3;
+
+			.events-card__image {
+				padding-top: 40.5%;
+			}
+		}
+
+		/* Полосы и квадраты в бэкграунде */
+		&:nth-child(1),
+		&:nth-child(8) {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				width: 100vw;
+				height: 100%;
+				background-color: $green-0c;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				background-color: $red;
+			}
+		}
+
+		&:nth-child(1) {
+			&::before {
+				right: 100%;
+			}
+
+			&::after {
+				top: 0;
+				right: 100%;
+			}
+		}
+
+		&:nth-child(8) {
+			&::before {
+				left: 100%;
+			}
+
+			&::after {
+				bottom: 0;
+				left: 100%;
+			}
+		}
+	}
+
+	&__more {
+		max-width: 328px;
+		width: 100%;
+		margin-top: 30px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

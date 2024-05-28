@@ -1,29 +1,49 @@
 .button {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 25px;
-    background-color: $red;
-    font-family: $latoFont;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 1.2;
-    cursor: pointer;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 17px;
+	background-color: $green-18;
+	font-family: $latoFont;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 1.2;
+	cursor: pointer;
+	transition: 0.3s ease;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: -20px;
-        right: -20px;
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-color: inherit;
-        transition: 0.3s ease;
-    }
+	&:hover:not(.button--angle-hover) {
+		background-color: rgba($green-18, 0.8);
+	}
 
-    &:hover::after {
-        transform: translate(-20px, 20px);
-    }
+	svg {
+		color: $white;
+	}
+
+	&--angle-hover {
+		&::after {
+			content: "";
+			position: absolute;
+			top: -20px;
+			right: -20px;
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-color: inherit;
+			transition: 0.3s ease;
+		}
+
+		&:hover::after {
+			transform: translate(-20px, 20px);
+		}
+	}
+
+	&--red {
+		background-color: $red;
+
+		&:hover:not(.button--angle-hover) {
+			background-color: rgba($red, 0.8);
+		}
+	}
 }

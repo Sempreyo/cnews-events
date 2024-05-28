@@ -1,0 +1,49 @@
+.articles {
+	&__container-outer {
+		position: relative;
+		max-width: 1392px;
+	}
+
+	&__container-inner {
+		max-width: 1040px;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 170px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $green-18;
+	}
+
+	&__waves {
+		@include waves-pattern('0c4552');
+
+		max-width: 395px;
+		width: 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		bottom: 100px;
+		right: 0;
+	}
+
+	&__slider-wrapper {
+		position: relative;
+		margin-top: 36px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 57px;
+			right: 100%;
+			width: 40px;
+			height: 40px;
+			background-color: $red;
+		}
+	}
+
+	&__pagination {
+		margin-top: 26px;
+	}
+}

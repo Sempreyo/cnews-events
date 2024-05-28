@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const topEventsCarousel = document.querySelectorAll(".hero__slider");
+	const articlesCarousel = document.querySelectorAll(".articles__slider");
 
 	if (topEventsCarousel.length > 0) {
 		topEventsCarousel.forEach(elem => {
@@ -9,6 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
 				loop: true,
 				pagination: {
 					el: ".hero__pagination",
+					clickable: true,
+				}
+			});
+		});
+	}
+
+	if (articlesCarousel.length > 0) {
+		articlesCarousel.forEach(elem => {
+			const slider = new Swiper(elem, {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				pagination: {
+					el: ".articles__pagination",
 					clickable: true,
 				}
 			});

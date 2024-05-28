@@ -13,7 +13,7 @@ block main
 		include ../blocks/header
 		section.hero
 			.container.hero__container
-				+waves-pattern('waves-pattern--red hero__waves')
+				+waves-pattern('hero__waves')
 				.hero__slider.swiper
 					.swiper-wrapper
 						.top-event.swiper-slide
@@ -51,4 +51,147 @@ block main
 					.hero__pagination
 			.container
 				+title('Предстоящие <br> <span>мероприятия</span>')
-			
+	section.events
+		.container.events__container
+			.events__grid-wrapper
+				+waves-pattern('events__waves')
+				.events__grid
+					.events__item.events-card
+						.events-card__image
+							+picture('placeholder', 'jpg')
+						.events-card__content
+							.events-card__title Облачные технологии 2023
+							.events-card__bottom
+								.events-card__date 14.02.2023
+								.events-card__tag Конференция
+							a.events-card__link(href='#')
+					.events__item.events-card
+						.events-card__image
+							+picture('placeholder', 'jpg')
+						.events-card__content
+							.events-card__title Большие данные и бизнес-аналитика 2023
+							.events-card__bottom
+								.events-card__date 14.02.2023
+								.events-card__tag Конференция
+							a.events-card__link(href='#')
+					.events__item.events-card
+						.events-card__image
+							+picture('placeholder', 'jpg')
+						.events-card__content
+							.events-card__title Технологический суверенитет 一 новая ИТ-стратегия российского бизнеса
+							.events-card__bottom
+								.events-card__date 14.02.2023
+								.events-card__tag Конференция
+							a.events-card__link(href='#')
+					.events__item.events-card
+						.events-card__image
+							+picture('placeholder', 'jpg')
+						.events-card__content
+							.events-card__title Технологический суверенитет 一 новая ИТ-стратегия российского бизнеса
+							.events-card__bottom
+								.events-card__date 14.02.2023
+								.events-card__tag Конференция
+							a.events-card__link(href='#')
+					.events__item.events-card
+						.events-card__image
+							+picture('placeholder', 'jpg')
+						.events-card__content
+							.events-card__title Технологический суверенитет 一 новая ИТ-стратегия российского бизнеса
+							.events-card__bottom
+								.events-card__date 14.02.2023
+								.events-card__tag Конференция
+							a.events-card__link(href='#')
+					.events__item.events-card
+						.events-card__image
+							+picture('placeholder', 'jpg')
+						.events-card__content
+							.events-card__title Облачные технологии 2023
+							.events-card__bottom
+								.events-card__date 14.02.2023
+								.events-card__tag Конференция
+							a.events-card__link(href='#')
+					.events__item.events-card
+						.events-card__image
+							+picture('placeholder', 'jpg')
+						.events-card__content
+							.events-card__title Большие данные и бизнес-аналитика 2023
+							.events-card__bottom
+								.events-card__date 14.02.2023
+								.events-card__tag Конференция
+							a.events-card__link(href='#')
+					.events__item.events-card
+						.events-card__image
+							+picture('placeholder', 'jpg')
+						.events-card__content
+							.events-card__title Технологический суверенитет 一 новая ИТ-стратегия российского бизнеса
+							.events-card__bottom
+								.events-card__date 14.02.2023
+								.events-card__tag Конференция
+							a.events-card__link(href='#')
+			+button('Показать все мероприятия', 'events__more', 'chevron-down', '20', '13')
+	section.main-event
+		.container.main-event__container
+			.main-event__window
+				+waves-pattern('main-event__waves')
+				a.main-event__link(href='#')
+				.main-event__image
+					+picture('placeholder', 'jpg')
+				.main-event__content
+					.main-event__title
+						span CNEWS FORUM 2022
+					.main-event__info
+						.main-event__tag Конференция
+						.main-event__date 09.02.2023
+						.main-event__text-link Подробнее
+	section.articles
+		.container.articles__container-outer
+			.articles__bg
+				+waves-pattern('articles__waves')
+			.container.articles__container-inner
+				+title('материалы')
+				.articles__slider-wrapper
+					.articles__slider.swiper
+						.swiper-wrapper
+							.articles-card.swiper-slide
+								.articles-card__title Что такое идеальная цифровая инфраструктура
+								.articles-card__image
+									+picture('placeholder', 'jpg')
+								.articles-card__bottom
+									.articles-card__text Перед многими российскими компаниями стоит задача перестройки цифровой инфраструктуры. С одной стороны
+									.articles-card__link-text Подробнее
+							.articles-card.swiper-slide
+								.articles-card__title Как перейти от управления документами к управлению контентом
+								.articles-card__image
+									+picture('placeholder', 'jpg')
+								.articles-card__bottom
+									.articles-card__text Перед многими российскими компаниями стоит задача перестройки цифровой инфраструктуры. С одной стороны
+									.articles-card__link-text Подробнее
+							.articles-card.swiper-slide
+								.articles-card__title Какие проблемы можно решить с помощью Open Source
+								.articles-card__image
+									+picture('placeholder', 'jpg')
+								.articles-card__bottom
+									.articles-card__text Перед многими российскими компаниями стоит задача перестройки цифровой инфраструктуры. С одной стороны
+									.articles-card__link-text Подробнее
+							.articles-card.swiper-slide
+								.articles-card__title Что такое идеальная цифровая инфраструктура
+								.articles-card__image
+									+picture('placeholder', 'jpg')
+								.articles-card__bottom
+									.articles-card__text Перед многими российскими компаниями стоит задача перестройки цифровой инфраструктуры. С одной стороны
+									.articles-card__link-text Подробнее
+							.articles-card.swiper-slide
+								.articles-card__title Как перейти от управления документами к управлению контентом
+								.articles-card__image
+									+picture('placeholder', 'jpg')
+								.articles-card__bottom
+									.articles-card__text Перед многими российскими компаниями стоит задача перестройки цифровой инфраструктуры. С одной стороны
+									.articles-card__link-text Подробнее
+							.articles-card.swiper-slide
+								.articles-card__title Какие проблемы можно решить с помощью Open Source
+								.articles-card__image
+									+picture('placeholder', 'jpg')
+								.articles-card__bottom
+									.articles-card__text Перед многими российскими компаниями стоит задача перестройки цифровой инфраструктуры. С одной стороны
+									.articles-card__link-text Подробнее
+						.articles__pagination

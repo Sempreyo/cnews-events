@@ -1,2 +1,5 @@
-mixin button(text, className)
-    .button(class=className, href="#")!= text
+mixin button(text, className, icon, w, h)
+	.button(class=className, href='#')
+		span!= text
+		if icon
+			+icon(icon)(width=w, height=h)

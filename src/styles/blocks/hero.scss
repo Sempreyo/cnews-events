@@ -9,6 +9,8 @@
     }
 
     &__waves {
+        @include waves-pattern('ed344a');
+
         position: absolute;
         top: 80px;
         left: calc(100% - 20px);

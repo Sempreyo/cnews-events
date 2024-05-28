@@ -1,0 +1,68 @@
+.events-card {
+	$parent: &;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: $white;
+
+	&:hover {
+		#{$parent}__image img {
+			transform: scale(1.05);
+		}
+	}
+
+	&__image {
+		position: relative;
+		height: 0;
+		padding-top: 63%;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-grow: 1;
+		padding: 15px 15px 10px;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		min-height: 70px;
+		color: $green-0c;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1.33;
+	}
+
+	&__bottom {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 20px;
+		margin-top: 12px;
+		color: $green-18;
+		font-size: 11px;
+		line-height: 1.75;
+	}
+
+	&__link {
+		position: absolute;
+		inset: 0;
+	}
+}
