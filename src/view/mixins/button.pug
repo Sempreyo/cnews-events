@@ -1,5 +1,5 @@
 mixin button(text, className, icon, w, h)
-	.button(class=className, href='#')
+	a.button(class=className, href='#')&attributes(attributes)
 		span!= text
 		if icon
 			+icon(icon)(width=w, height=h)

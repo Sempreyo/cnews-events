@@ -1,0 +1,5 @@
+mixin field(label, type, fieldName, className)
+    label.field(class=className)
+        span!= label
+        if type == 'text' || type == 'email' || type == 'tel'
+            input(type=type, name=fieldName)

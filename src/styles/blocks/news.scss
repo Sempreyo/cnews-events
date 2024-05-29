@@ -1,0 +1,42 @@
+.news {
+    position: relative;
+    padding-bottom: 128px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: $red;
+    }
+
+    &__outer {
+        position: relative;
+        padding: 56px 0 86px;
+        background-color: $gray-57;
+    }
+
+    &__container {
+        max-width: 1040px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 0;
+        margin-top: 45px;
+    }
+
+    &__more {
+		max-width: 328px;
+		width: 100%;
+		margin-top: 30px;
+		position: absolute;
+        bottom: -22px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

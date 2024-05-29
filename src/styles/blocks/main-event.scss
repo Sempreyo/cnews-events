@@ -1,7 +1,18 @@
 .main-event {
 	$parent: &;
 
+	position: relative;
 	padding: 98px 0 90px;
+
+	&::before {
+        @include blob();
+
+        content: "";
+        top: 13vw;
+		left: -2vw;
+		width: 60vw;
+		height: 60vw;
+    }
 
 	&__container {
 		max-width: 945px;

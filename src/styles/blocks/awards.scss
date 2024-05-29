@@ -1,0 +1,50 @@
+.awards {
+    padding-bottom: 96px;
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 1040px;
+    }
+
+    &__waves {
+		@include waves-pattern('0c4552');
+
+		position: absolute;
+		top: 33px;
+		left: calc(100% - 20px);
+	}
+
+    &__item {
+        position: relative;
+        height: 0;
+        padding-top: 40%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            height: 100%;
+            background-color: $green-0c;
+        }
+
+        &:nth-child(even)::before {
+            right: 100%;
+        }
+
+        &:nth-child(odd)::before {
+            left: 100%;
+        }
+
+        img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

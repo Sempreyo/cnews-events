@@ -121,9 +121,23 @@ textarea {
 	border: 3px solid $green-18;
 	border-radius: 50%;
 	box-sizing: border-box;
+	transition: 0.3s ease;
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgba($white, 0.6);
+	}
 }
 
 .swiper-pagination-bullet-active {
 	background-color: transparent;
 	border-color: $red;
+	cursor: default;
+}
+
+.swiper-pagination-fill .swiper-pagination-bullet {
+	border-color: $white;
 }

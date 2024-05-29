@@ -1,0 +1,30 @@
+.field {
+    position: relative;
+    display: block;
+    max-width: 475px;
+    width: 100%;
+
+    span {
+        color: $black;
+        font-family: $latoFont;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 1.38;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'] {
+        width: 100%;
+        background-color: $white;
+        border: 1px solid transparent;
+        padding: 17px 15px;
+        margin-top: 8px;
+        transition: border-color 0.3s ease;
+
+        &:hover,
+        &:focus {
+            border-color: $black;
+        }
+    }
+}

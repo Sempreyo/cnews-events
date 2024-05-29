@@ -1,0 +1,62 @@
+.subscribe {
+    &__container {
+		position: relative;
+		max-width: 1392px;
+	}
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__main {
+        display: flex;
+        gap: 115px;
+        max-width: 1040px;
+    }
+
+    &__left {
+        position: relative;
+        max-width: 300px;
+        padding-top: 70px;
+    }
+
+    &__title {
+        font-family: $tekturFont;
+        color: $black;
+        font-weight: 500;
+        font-size: 37px;
+        line-height: 1;
+        text-transform: uppercase;
+
+        span {
+            display: block;
+            font-size: 27px;
+            line-height: 1;
+            margin-top: 13px;
+        }
+    }
+
+    &__waves {
+        @include waves-pattern('ed344a');
+
+        position: absolute;
+        bottom: 70px;
+        left: -20px;
+        max-width: 271px;
+        transform: rotate(90deg);
+    }
+
+    &__form {
+        max-width: 475px;
+        flex-grow: 1;
+        padding: 45px 0 60px;
+    }
+}

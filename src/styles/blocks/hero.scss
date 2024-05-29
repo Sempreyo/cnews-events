@@ -1,9 +1,30 @@
 .hero {
+    position: relative;
     padding-top: 90px;
     padding-bottom: 40px;
 
+    &::before {
+        @include blob();
+
+        content: "";
+        top: -2vw;
+        left: 24vw;
+        width: 18.7vw;
+        height: 18.7vw;
+    }
+
+    &::after {
+        @include blob();
+
+        content: "";
+        bottom: -10vw;
+        left: 45vw;
+        width: 30.5vw;
+        height: 30.5vw;
+    }
+
     &__container {
-        max-width: 820px;
+        max-width: 860px;
         margin-bottom: 97px;
         position: relative;
     }

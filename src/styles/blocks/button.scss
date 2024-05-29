@@ -46,4 +46,8 @@
 			background-color: rgba($red, 0.8);
 		}
 	}
+
+	&--outline {
+		border: 1px solid $white;
+	}
 }

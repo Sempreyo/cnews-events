@@ -1,6 +1,21 @@
 .events {
+	$parent: &;
+
+	position: relative;
+
+	&::before {
+        @include blob();
+
+        content: "";
+        bottom: 15vw;
+		left: 56vw;
+		width: 30.5vw;
+		height: 30.5vw;
+    }
+
 	&__container {
 		max-width: 1040px;
+		position: relative;
 	}
 
 	&__grid-wrapper {
@@ -85,5 +100,87 @@
 		position: relative;
 		left: 50%;
 		transform: translateX(-50%);
+	}
+
+	&--archive {
+		padding-top: 100px;
+
+		&::before {
+			top: 2vw;
+			right: -2vw;
+			bottom: unset;
+			left: unset;
+			width: 60vw;
+			height: 60vw;
+		}
+
+		#{$parent} {
+			&__container {
+				padding-bottom: 45px;
+			}
+
+			&__waves {
+				top: 75px;
+				bottom: unset;
+				right: calc(100% - 30px);
+			}
+
+			&__bg-nodes {
+				position: absolute;
+				bottom: 0;
+				left: calc(100% - 20px);
+				width: calc((100vw - 1040px / 2) / 2);
+				height: 438px;
+
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 40px;
+					height: 40px;
+					background-color: $red;
+				}
+			}
+
+			&__grid-wrapper {
+				margin-top: 38px;
+			}
+
+			&__grid {
+				grid-template-columns: repeat(3, 1fr);
+				gap: 8px;
+			}
+	
+			&__item {
+				grid-column: span 1;
+		
+				/* Ширина элементов в каждой четной строке грида */
+				&:nth-child(5n),
+				&:nth-child(5n - 1) {
+					grid-column: span 1;
+		
+					.events-card__image {
+						padding-top: 63%;
+					}
+				}
+		
+				/* Полосы и квадраты в бэкграунде */
+				&:nth-child(1),
+				&:nth-child(8) {
+					&::before {
+						display: none;
+					}
+		
+					&::after {
+						display: none;
+					}
+				}
+			}
+
+			&__title-next {
+				margin-top: 88px;
+			}
+		}
 	}
 }

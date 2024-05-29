@@ -2,6 +2,7 @@
 	&__container-outer {
 		position: relative;
 		max-width: 1392px;
+		padding-bottom: 52px;
 	}
 
 	&__container-inner {
@@ -17,6 +18,14 @@
 		background: $green-18;
 	}
 
+	&__bg-nodes {
+		position: absolute;
+		top: 0;
+		right: 100%;
+		width: calc((100vw - 1392px / 2) / 2);
+		height: 100%;
+	}
+
 	&__waves {
 		@include waves-pattern('0c4552');
 
@@ -24,7 +33,7 @@
 		width: 100%;
 		background-repeat: no-repeat;
 		position: absolute;
-		bottom: 100px;
+		top: 172px;
 		right: 0;
 	}
 
@@ -45,5 +54,14 @@
 
 	&__pagination {
 		margin-top: 26px;
+	}
+
+	&__more {
+		max-width: 328px;
+		width: 100%;
+		margin-top: 30px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }

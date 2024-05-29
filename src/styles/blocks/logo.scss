@@ -1,4 +1,6 @@
 .logo {
+    $parent: &;
+
     display: flex;
     align-items: center;
 
@@ -12,10 +14,33 @@
     &__icon {
         &--itz {
             width: 154px;
+            height: 96px;
         }
 
         &--cnews {
             width: 193px;
+            height: 68px;
+        }
+    }
+
+    &--small {
+        #{$parent} {
+            &__delimiter {
+                height: 65px;
+                margin: 0 32px;
+            }
+
+            &__icon {
+                &--itz {
+                    width: 100px;
+                    height: 63px;
+                }
+        
+                &--cnews {
+                    width: 124px;
+                    height: 45px;
+                }
+            }
         }
     }
 }

@@ -1,11 +1,12 @@
 .title {
     font-family: $tekturFont;
+    font-weight: 500;
     font-size: 37px;
     line-height: 1;
     text-transform: uppercase;
 
     span {
         color: $green-light;
-        padding-left: 67px;
+        padding-left: 47px;
     }
 }
