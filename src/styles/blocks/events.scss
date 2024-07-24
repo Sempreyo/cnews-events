@@ -40,13 +40,29 @@
 	&__item {
 		grid-column: span 2;
 
+		@include max(tl) {
+			grid-column: span 3;
+		}
+
+		@include max(t) {
+			grid-column: span 6;
+		}
+
 		/* Ширина элементов в каждой четной строке грида */
 		&:nth-child(5n),
 		&:nth-child(5n - 1) {
 			grid-column: span 3;
 
+			@include max(t) {
+				grid-column: span 6;
+			}
+
 			.events-card__image {
 				padding-top: 40.5%;
+
+				@include max(tl) {
+					padding-top: 63%;
+				}
 			}
 		}
 
@@ -151,6 +167,15 @@
 			&__grid {
 				grid-template-columns: repeat(3, 1fr);
 				gap: 8px;
+
+				@include max(tl) {
+					grid-template-columns: repeat(2, 1fr);
+					gap: 20px;
+				}
+		
+				@include max(t) {
+					grid-template-columns: repeat(1, 1fr);
+				}
 			}
 	
 			&__item {

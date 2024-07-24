@@ -9,17 +9,46 @@
         height: 100px;
         background-color: $white;
         margin: 0 43px;
+
+        @include max(ti) {
+            height: 71px;
+            margin: 0 20px;
+        }
+
+        @include max(t) {
+            height: 37px;
+        }
     }
 
     &__icon {
         &--itz {
             width: 154px;
             height: 96px;
+
+            @include max(ti) {
+                width: 114px;
+                height: 71px;
+            }
+
+            @include max(t) {
+                width: 60px;
+                height: 37px;
+            }
         }
 
         &--cnews {
             width: 193px;
             height: 68px;
+
+            @include max(ti) {
+                width: 133px;
+                height: 47px;
+            }
+
+            @include max(t) {
+                width: 73px;
+                height: 26px;
+            }
         }
     }
 
@@ -28,17 +57,32 @@
             &__delimiter {
                 height: 65px;
                 margin: 0 32px;
+
+                @include max(ti) {
+                    height: 50px;
+                    margin: 0 20px;
+                }
             }
 
             &__icon {
                 &--itz {
                     width: 100px;
                     height: 63px;
+
+                    @include max(ti) {
+                        width: 80px;
+                        height: 50px;
+                    }
                 }
         
                 &--cnews {
                     width: 124px;
                     height: 45px;
+
+                    @include max(ti) {
+                        width: 90px;
+                        height: 33px;
+                    }
                 }
             }
         }

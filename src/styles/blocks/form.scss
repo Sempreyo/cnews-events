@@ -10,6 +10,10 @@
         justify-content: center;
         align-self: flex-end;
         margin-top: 30px;
+
+        @include max(tl) {
+            align-self: flex-start;
+        }
     }
 
     &__field:last-of-type {
@@ -21,6 +25,10 @@
             width: 40px;
             height: 40px;
             background-color: $red;
+
+            @include max(tl) {
+                display: none;
+            }
         }
     }
 }

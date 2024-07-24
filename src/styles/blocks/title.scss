@@ -5,8 +5,20 @@
     line-height: 1;
     text-transform: uppercase;
 
+    @include max(d) {
+        font-size: fluid(32, 37, 768, 1279);
+    }
+
+    @include max(ti) {
+        font-size: fluid(26, 32, 360, 767);
+    }
+
     span {
         color: $green-light;
         padding-left: 47px;
+
+        @include max(ti) {
+            padding-left: 0;
+        }
     }
 }

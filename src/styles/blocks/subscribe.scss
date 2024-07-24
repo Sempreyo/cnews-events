@@ -20,12 +20,21 @@
         display: flex;
         gap: 115px;
         max-width: 1040px;
+
+        @include max(tl) {
+            flex-direction: column;
+            gap: 50px;
+        }
     }
 
     &__left {
         position: relative;
         max-width: 300px;
         padding-top: 70px;
+
+        @include max(tl) {
+            position: unset;
+        }
     }
 
     &__title {
@@ -52,11 +61,30 @@
         left: -20px;
         max-width: 271px;
         transform: rotate(90deg);
+
+        @include max(tl) {
+            left: unset;
+            right: -40px;
+            transform: rotate(0);
+        }
+
+        @include max(ti) {
+            bottom: unset;
+            top: 15px;
+        }
+
+        @include max(t) {
+            display: none;
+        }
     }
 
     &__form {
         max-width: 475px;
         flex-grow: 1;
         padding: 45px 0 60px;
+
+        @include max(tl) {
+            padding: 0 0 60px;
+        }
     }
 }

@@ -7,10 +7,18 @@
     border: 6px solid $green-18;
     backdrop-filter: blur(5px);
 
+    @include max(ti) {
+        flex-direction: column;
+    }
+
     &__image {
         max-width: 403px;
         width: 100%;
         overflow: hidden;
+
+        @include max(ti) {
+            max-width: 100%;
+        }
 
         img {
             width: 100%;
@@ -22,6 +30,10 @@
 
     &__content {
         padding: 49px 10px 57px 49px;
+
+        @include max(t) {
+            padding: 30px 20px 40px;
+        }
     }
 
     &__type {
