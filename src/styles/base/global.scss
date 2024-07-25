@@ -105,9 +105,14 @@ textarea {
 	}
 }
 
+[hidden] {
+	display: none !important;
+}
+
 /* Swiper */
 .swiper-pagination-bullets {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	gap: 27px;
@@ -122,6 +127,10 @@ textarea {
 	border-radius: 50%;
 	box-sizing: border-box;
 	transition: 0.3s ease;
+
+	&:only-child {
+		visibility: hidden;
+	}
 }
 
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {

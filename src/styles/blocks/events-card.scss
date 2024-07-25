@@ -38,6 +38,12 @@
 		background-color: $white;
 	}
 
+	&__tag {
+		&--red {
+			color: $red;
+		}
+	}
+
 	&__title {
 		display: flex;
 		align-items: center;

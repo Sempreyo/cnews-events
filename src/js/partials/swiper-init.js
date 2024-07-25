@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				loop: true,
 				pagination: {
 					el: ".hero__pagination",
-					clickable: true,
+					clickable: true
 				}
 			});
 		});
