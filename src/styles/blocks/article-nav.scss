@@ -1,0 +1,26 @@
+.article-nav {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 40px;
+    overflow: hidden;
+
+    @include max(ti) {
+        border-radius: 20px;
+    }
+
+    &__link {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 10px;
+        font-size: 16px;
+        background-color: rgba($green-18, 0.8);
+        box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2) inset;
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: $green-18;
+        }
+    }
+}

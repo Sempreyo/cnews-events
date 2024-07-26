@@ -21,4 +21,16 @@
             padding-left: 0;
         }
     }
+
+    &--subtitle {
+        font-size: 30px;
+
+        @include max(d) {
+            font-size: fluid(26, 30, 768, 1279);
+        }
+
+        @include max(ti) {
+            font-size: fluid(22, 26, 360, 767);
+        }
+    }
 }

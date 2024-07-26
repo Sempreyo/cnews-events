@@ -1,0 +1,34 @@
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+
+    .breadcrumbs-item:not(:last-child) {
+        position: relative;
+        margin-right: 31px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -31px;
+            content: '';
+            display: block;
+            width: 23px;
+            height: 23px;
+            background-image: url('data:image/svg+xml,<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.94249 11.102C11.3698 11.102 13.3292 9.14046 13.3292 6.71052C13.3292 4.28057 11.3698 2.31905 8.94249 2.31905C6.51518 2.31905 4.55579 4.28057 4.55579 6.71052C4.55579 9.14046 6.51518 11.102 8.94249 11.102ZM11.1358 22.8126C17.1895 22.8126 22.1026 17.8941 22.1026 11.8339C22.1026 5.77367 17.1895 0.855225 11.1358 0.855225C5.0822 0.855225 0.169098 5.77367 0.169098 11.8339C0.169098 17.8941 5.0822 22.8126 11.1358 22.8126Z" fill="%2300FFB0"/></svg>');
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
+    }
+
+    .breadcrumbs-item:last-child {
+        color: $green-light;
+    }
+}

@@ -51,10 +51,14 @@ body {
 	white-space: normal;
 }
 
-main {
+.main {
 	overflow: hidden;
 	position: relative;
 	z-index: 1;
+
+	&--no-overflow {
+		overflow: unset;
+	}
 }
 
 a {

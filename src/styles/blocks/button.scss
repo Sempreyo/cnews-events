@@ -6,16 +6,19 @@
 	gap: 10px;
 	padding: 17px;
 	background-color: $green-18;
+	border: 1px solid $green-18;
 	color: $white;
 	font-family: $latoFont;
 	font-weight: 700;
 	font-size: 15px;
 	line-height: 1.2;
+	box-sizing: border-box;
 	cursor: pointer;
 	transition: 0.3s ease;
 
 	&:hover:not(.button--angle-hover) {
 		background-color: rgba($green-18, 0.8);
+		border-color: rgba($green-18, 0.8);
 	}
 
 	svg {
@@ -42,13 +45,30 @@
 
 	&--red {
 		background-color: $red;
+		border-color: $red;
 
 		&:hover:not(.button--angle-hover) {
 			background-color: rgba($red, 0.8);
+			border-color: rgba($red, 0.8);
 		}
 	}
 
 	&--outline {
-		border: 1px solid $white;
+		border-color: $white;
+		background-color: transparent;
+
+		&:hover:not(.button--angle-hover) {
+			border-color: $white;
+			background-color: rgba($black, 0.2);
+		}
+	}
+
+	&--rounded {
+		border-radius: 8px;
+	}
+
+	&--disabled {
+		opacity: 0.5;
+		pointer-events: none;
 	}
 }
