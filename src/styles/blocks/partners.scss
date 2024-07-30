@@ -1,0 +1,15 @@
+.partners {
+	$parent: &;
+
+	padding: 60px 0;
+
+	&__wrapper {
+		margin-top: 30px;
+	}
+
+	&__item {
+		& + #{$parent}__item {
+			margin-top: 30px;
+		}
+	}
+}

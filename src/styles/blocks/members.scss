@@ -1,0 +1,68 @@
+.members {
+	padding: 60px 0;
+
+	&__grid {
+		display: grid;
+		align-items: flex-start;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px 20px;
+		margin-top: 40px;
+
+		@include max(tl) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max(t) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px;
+		}
+	}
+
+	&__item {
+		display: flex;
+	}
+
+	&__number {
+		display: flex;
+		gap: 10px;
+		color: $green-light;
+		font-weight: 700;
+		font-size: 24px;
+		margin-right: 10px;
+
+		@include max(ti) {
+			font-size: 18px;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			width: 4px;
+			height: 100%;
+			background-color: $green-light;
+			position: relative;
+			top: 4px;
+		}
+	}
+
+	&__company {
+		color: $green-light;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.2;
+
+		@include max(ti) {
+			font-size: 18px;
+		}
+	}
+
+	&__position {
+		color: $white;
+		font-size: 16px;
+		margin-top: 5px;
+
+		@include max(ti) {
+			font-size: 14px;
+		}
+	}
+}

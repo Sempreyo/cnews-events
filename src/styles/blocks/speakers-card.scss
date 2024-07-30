@@ -1,0 +1,51 @@
+.speakers-card {
+	$parent: &;
+
+	position: relative;
+
+	&:hover {
+		#{$parent}__wrapper {
+			transform: translate(-10px, -10px);
+		}
+	}
+
+	&::before {
+		position: absolute;
+		inset: 0;
+		content: "";
+		display: block;
+		background-color: $green-18;
+		border-radius: 25px;
+	}
+
+	&__wrapper {
+		position: relative;
+		height: 100%;
+		padding: 20px 30px;
+		background-color: $white;
+		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+		border-radius: 25px;
+		color: $black;
+		text-align: center;
+		transition: 0.3s ease;
+	}
+
+	&__photo {
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		margin: -100px auto 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__name {
+		font-size: 22px;
+		margin-top: 20px;
+	}
+
+	&__company {
+		font-size: 14px;
+		margin-top: 15px;
+	}
+}

@@ -58,6 +58,10 @@ body {
 
 	&--no-overflow {
 		overflow: unset;
+
+		& > section {
+			overflow: hidden;
+		}
 	}
 }
 
@@ -153,4 +157,18 @@ textarea {
 
 .swiper-pagination-fill .swiper-pagination-bullet {
 	border-color: $white;
+}
+
+/* Tooltip */
+.tooltip {
+	position: fixed;
+	background-color: $gray-df;
+	border-radius: 12px;
+	padding: 20px 40px;
+	width: 500px;
+	z-index: 600;
+	box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.24);
+	color: $black;
+	font-size: 14px;
+	line-height: 1.2;
 }

@@ -5,14 +5,14 @@
 	padding: 98px 0 90px;
 
 	&::before {
-        @include blob();
+		@include blob();
 
-        content: "";
-        top: 13vw;
+		content: "";
+		top: 13vw;
 		left: -2vw;
 		width: 60vw;
 		height: 60vw;
-    }
+	}
 
 	&__container {
 		max-width: 945px;
@@ -75,6 +75,11 @@
 		justify-content: space-between;
 		gap: 20px;
 		padding: 35px 35px 30px 25px;
+
+		@include max(ti) {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
 	}
 
 	&__title {
@@ -83,6 +88,10 @@
 		font-size: 30px;
 		line-height: 1.1;
 		text-transform: uppercase;
+
+		@include max(ti) {
+			font-size: 24px;
+		}
 
 		span {
 			background: no-repeat 0 100%;
@@ -94,6 +103,10 @@
 
 	&__info {
 		text-align: right;
+
+		@include max(ti) {
+			text-align: left;
+		}
 	}
 
 	&__tag {

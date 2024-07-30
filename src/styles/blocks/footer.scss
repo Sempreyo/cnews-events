@@ -1,6 +1,8 @@
 .footer {
     $parent: &;
 
+    position: relative;
+    z-index: 20;
     padding: 60px 0 60px;
     background-color: $green-0c;
 
