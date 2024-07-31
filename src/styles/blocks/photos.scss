@@ -1,0 +1,47 @@
+.photos {
+    padding: 60px 0 110px;
+
+    &__slider-wrapper {
+        position: relative;
+        margin-top: 30px;
+    }
+
+    &__slide {
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        pointer-events: none;
+
+        @include max(d) {
+            top: unset;
+            bottom: -80px;
+            justify-content: center;
+            height: auto;
+        }
+    }
+
+    /* Для фоток из zoom */
+    .event_month {
+        margin-top: 10px;
+    }
+
+    .gallery_list {
+        margin-top: 20px;
+    }
+}

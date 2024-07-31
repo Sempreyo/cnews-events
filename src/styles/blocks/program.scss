@@ -1,0 +1,52 @@
+.program {
+    background-color: $green-bg-light;
+    padding: 60px 0;
+
+    &__table-scroll {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+        border-collapse: collapse;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-top: 30px;
+
+        tr {
+            &:not(:first-child) {
+                border-top: 2px solid transparent;
+            }
+        }
+
+        td {
+            position: relative;
+            font-size: 16px;
+            line-height: 1.2;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+
+            &:first-child {
+                min-width: 140px;
+            }
+        }
+    }
+
+    &__time {
+        font-weight: 700;
+    }
+
+    &__file {
+        a {
+            &:hover svg {
+                transform: scale(1.05);
+            }
+        }
+
+        svg {
+            width: 30px;
+            height: 30px;
+            transition: 0.3s ease;
+        }
+    }
+}

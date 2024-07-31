@@ -20,6 +20,11 @@
 
 	&__grid-wrapper {
 		position: relative;
+		margin-top: 30px;
+
+		&--no-margin {
+			margin: 0;
+		}
 	}
 
 	&__waves {

@@ -70,13 +70,6 @@ a {
 	text-decoration: none;
 }
 
-ul,
-ol,
-nav {
-	list-style: none;
-	padding: 0;
-}
-
 svg {
 	width: auto;
 	height: auto;
@@ -117,7 +110,7 @@ textarea {
 	display: none !important;
 }
 
-/* Swiper */
+/* Swiper pagination */
 .swiper-pagination-bullets {
 	display: flex;
 	flex-wrap: wrap;
@@ -133,6 +126,7 @@ textarea {
 	background-color: $white;
 	border: 3px solid $green-18;
 	border-radius: 50%;
+	opacity: 1;
 	box-sizing: border-box;
 	transition: 0.3s ease;
 
@@ -157,6 +151,55 @@ textarea {
 
 .swiper-pagination-fill .swiper-pagination-bullet {
 	border-color: $white;
+}
+
+/* Swiper navigation */
+.swiper-button-prev,
+.swiper-button-next {
+	position: relative;
+    top: 0;
+    width: 80px;
+	height: 100%;
+    margin-top: 0;
+	pointer-events: auto;
+	transition: 0.3s ease;
+
+	@include max(d) {
+		width: 50px;
+		height: 50px;
+	}
+
+	&:hover svg {
+		color: $green-light;
+	}
+
+	svg {
+		width: 80px;
+		height: 80px;
+		color: $white;
+		transition: 0.3s ease;
+
+		@include max(d) {
+			width: 50px;
+			height: 50px;
+		}
+	}
+}
+
+.swiper-button-prev {
+	left: -80px;
+
+	@include max(d) {
+		left: 0;
+	}
+}
+
+.swiper-button-next {
+	right: -80px;
+
+	@include max(d) {
+		right: 0;
+	}
 }
 
 /* Tooltip */
