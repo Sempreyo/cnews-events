@@ -1,0 +1,61 @@
+.terms {
+    position: relative;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: $green-bg;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+
+    &__content {
+        @include max(d) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__note {
+        font-size: 18px;
+        text-align: center;
+
+        a {
+            color: $green-light;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__contacts {
+        text-align: center;
+    }
+
+    &__number {
+        color: $green-light;
+        margin-top: 15px;
+
+        span {
+            display: block;
+
+            &:first-child {
+                font-size: 24px;
+            }
+
+            &:nth-child(2) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__email {
+        margin-top: 15px;
+    }
+
+    &__curator {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+}

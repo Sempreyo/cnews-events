@@ -1,0 +1,27 @@
+.register {
+    padding: 60px 0;
+    background-color: $green-18;
+
+    &__container {
+        max-width: 1920px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+
+        @include max(d) {
+            flex-direction: column;
+            gap: 70px;
+        }
+    }
+
+    &__left {
+        min-width: 500px;
+        max-width: 500px;
+
+        @include max(d) {
+            min-width: unset;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
