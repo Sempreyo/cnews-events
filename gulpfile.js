@@ -30,6 +30,7 @@ function browsersync() {
 
 function startwatch() {
 	watch(['src/**/*.js', '!src/**/*.min.js'], scripts);
+	watch(['src/**/*.js', '!src/**/*.min.js'], scriptsPages);
 	watch('src/**/styles/**/*', styles);
 	watch('src/**/*.html').on('change', browserSync.reload);
 	watch('src/images/**/*', images);
@@ -53,6 +54,15 @@ function scripts() {
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
 		.pipe(sourcemaps.write('./maps'))
+		.pipe(dest('public/js/'))
+		.pipe(browserSync.stream())
+}
+
+function scriptsPages() {
+	return src('src/js/pages/*.js')
+		.pipe(plumber())
+		.pipe(rigger())
+		.pipe(uglify())
 		.pipe(dest('public/js/'))
 		.pipe(browserSync.stream())
 }
@@ -146,6 +156,6 @@ exports.imagesWebp = imagesWebp;
 exports.icons = icons;
 exports.favicons = favicons;
 
-exports.public = series(cleandist, pugHtml, fonts, styles, scripts, imagesWebp, images, icons, favicons);
+exports.public = series(cleandist, pugHtml, fonts, styles, scripts, scriptsPages, imagesWebp, images, icons, favicons);
 
-exports.default = series(images, icons, imagesWebp, parallel(pugHtml, fonts, styles, scripts, favicons, browsersync, startwatch));
+exports.default = series(images, icons, imagesWebp, parallel(pugHtml, fonts, styles, scripts, scriptsPages, favicons, browsersync, startwatch));
